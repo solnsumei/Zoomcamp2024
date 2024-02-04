@@ -75,3 +75,8 @@ docker run -it \
     --url=https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
 
 ```
+
+## Using Docker Compose
+- Run `docker-compose up` to start the services defined in the docker-compose.yaml file
+- Run `docker-compose down` to shut running services down
+- Run `docker-compose up -d` to run in detached mode.
