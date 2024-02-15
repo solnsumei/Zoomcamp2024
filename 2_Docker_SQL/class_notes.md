@@ -4,7 +4,7 @@
 
 ## Running pgcli to log into database
 
-`pgcli -h localhost -p 5432 -u root`
+`pgcli -h localhost -p 5432 -U root ny_taxi`
 
 ## Adding pgAdmin for postgres
 - pulling the docker image use -- `docker pull dpage/pgadmin4`
@@ -80,3 +80,9 @@ docker run -it \
 - Run `docker-compose up` to start the services defined in the docker-compose.yaml file
 - Run `docker-compose down` to shut running services down
 - Run `docker-compose up -d` to run in detached mode.
+
+docker run -it \
+    -p 8080:80 \
+    -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \
+    -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \
+    dpage/pgadmin4

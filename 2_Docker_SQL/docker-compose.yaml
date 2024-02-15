@@ -14,7 +14,10 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
       - PGADMIN_DEFAULT_PASSWORD=root
-    volumes:
-      - "./pgadmin_data:/var/lib/pgadmin:rw"
+      - PGADMIN_CONFIG_SERVER_MODE=True
     ports:
       - "8080:80"
+    volumes:
+      - "./pgadmin:/var/lib/pgadmin:rw"
+    depends_on:
+      - pgdatabase
